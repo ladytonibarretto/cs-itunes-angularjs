@@ -1,0 +1,53 @@
+
+
+
+<script>
+    var module       = angular.module("myapp", []);
+    var myController = module.controller("myController", function($scope) {
+ 
+        $scope.data = { time : new Date() };
+
+        $scope.temp = "Hello";
+        $scope.updateTime = function() {
+            $scope.data.time = new Date();
+            console.log($scope.data.time);
+        }
+
+        document.getElementById("updateTimeButton")
+                .addEventListener('click', function() {
+            console.log("update time clicked");
+            $scope.data.time = new Date();
+        });
+    });
+</script>
+<div ng-if="bool" class="fade">
+   Fade me in out
+</div>
+<button ng-click="bool=true">Fade In!</button>
+<button ng-click="bool=false">Fade Out!</button>
+	<h4>Favorites View</h4>
+
+	<div style="margin-left: -35px">
+		<!-- <ul>
+			<li ng-repeat="track in favoriteItems">
+				<playlist track="track.itunes_data"></playlist>
+				<button type="button" class="btn btn-default btn-sm" ng-click="removeFromFave(track.id);">
+				 	<span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Remove from Favorites
+				</button></br></br></br>
+			</li>
+		</ul> -->
+		<ul class="list-group">
+			<ul ng-repeat="track in favoriteItems">
+				<div class="panel panel-primary col-md-8" >
+					<div class="panel-body">
+						<playlist track="track.itunes_data"></playlist>
+						<button type="button" class="btn btn-default btn-sm" ng-click="removeFromFave(track.id);">
+						 	<span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Remove from Favorites
+						</button>
+				  </div>
+				</div>				
+			</ul>
+			</br></br>	
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,17 @@
+#wrapper {
+  display: table;
+  margin-left: 200px;
+}
+#content {
+  display: table-cell;
+  float: right;
+  width: auto;
+  margin-left: -10px;
+  vertical-align: text-bottom;
+}
+#sidebar {
+  display: table-cell;
+  float: left;
+  margin-left: -200px;
+  width: auto;
+}

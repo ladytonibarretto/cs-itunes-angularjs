@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="iTunes" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>iTunes App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="iTunes/css/search.css">
+  <link rel="stylesheet" href="bower_components/jquery-ui/themes/smoothness/jquery-ui.css"/>
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+  <div style="margin-left: 20px">
+    <h3>iTunes App</h3>
+    <div class="btn-group">
+        <a href="#/favorites"><label class="btn btn-primary" ng-model="radioModel" btn-radio="'Favorites'">Favorites</label></a>
+        <a href="#/search"><label class="btn btn-primary" ng-model="radioModel" btn-radio="'Search'">Search</label></a>
+    </div></br></br>
+    <div ng-view> </div>
+  </div>
+
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-ui-date/src/date.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-audio/app/angular.audio.js"></script>
+  <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.0.js"></script>
+  <script src="app.js"></script>
+  <script src="iTunes/controllers/searchController.js"></script>
+  <script src="iTunes/controllers/favoritesController.js"></script>
+  <script src="iTunes/services/searchService.js"></script>
+  <script src="iTunes/services/favoritesService.js"></script>
+  <script src="iTunes/directives/iTunesDirectives.js"></script>
+  <script src="iTunes/directives/playlist.js"></script>
+</body>
+</html>

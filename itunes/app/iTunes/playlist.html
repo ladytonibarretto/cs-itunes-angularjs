@@ -1,0 +1,18 @@
+<div style="float: left; margin-right: 20px">
+	<img ng-src="{{track.artworkUrl100}}"></br>
+</div>
+<div>
+	<b>Title: </b> {{track.trackName}}</br>
+	<b>Artist: </b> {{track.artistName}}</br>	
+	<b>Album: </b> {{track.collectionName}}</br>	
+	<b>Genre: </b> {{track.primaryGenreName}}</br>	
+	<b>Price: </b> {{track.trackPrice | currency}}</br>
+</div></br>
+<div style="float: left; margin-right: 20px; margin-left: -3px">
+	<button type="button" class="btn btn-default btn-sm" ng-click="audio.paused? play() : pause()">
+	  <span class="{{audio.paused?'glyphicon glyphicon-play':'glyphicon glyphicon-pause'}}" aria-hidden="true"> {{audio.paused?'Play ':'Pause'}}</span>
+	</button>
+	<button type="button" class="btn btn-default btn-sm" ng-click="stop()">
+	 	<span class="glyphicon glyphicon-stop" aria-hidden="true"></span> Stop
+	</button>
+</div>
