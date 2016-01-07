@@ -1,5 +1,3 @@
-# cs-itunes-angularjs
-
 First AngularJS Application
 ===
 
